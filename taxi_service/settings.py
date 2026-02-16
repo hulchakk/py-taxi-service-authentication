@@ -129,7 +129,7 @@ STATICFILES_DIRS = (BASE_DIR / "static",)
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
-LOGIN_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = "taxi:index"
 
 LOGOUT_REDIRECT_URL = "taxi:index"
 

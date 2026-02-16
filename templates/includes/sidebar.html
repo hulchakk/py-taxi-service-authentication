@@ -1,7 +1,7 @@
 <ul class="sidebar-nav">
   {% if user.is_authenticated %}
-    <p>User: <a href="/drivers/{{ user.id }}">{{ user.username }}</a></p>
-    <form action="{% url "logout" %}" method="POST">
+    <p>User: <a href="{% url 'taxi:driver-detail' pk=user.id %}">{{ user.username }}</a></p>
+    <form action="{% url 'logout' %}" method="POST">
       {% csrf_token %}
       <input type="submit" value="Log out">
     </form>
